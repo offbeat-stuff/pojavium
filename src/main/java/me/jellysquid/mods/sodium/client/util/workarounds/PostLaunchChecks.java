@@ -25,7 +25,7 @@ public class PostLaunchChecks {
         if (isUsingPojavLauncher()) {
             var message = Text.translatable("sodium.console.pojav_launcher");
 
-            Console.instance().logMessage(MessageLevel.ERROR, message, 45.0);
+            Console.instance().logMessage(MessageLevel.ERROR, message, 15.0);
         }
     }
 
