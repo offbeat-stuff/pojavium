@@ -1,11 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "sodium",
+  "id": "pojavium",
   "version": "${version}",
-  "name": "Sodium",
-  "description": "Sodium is a free and open-source optimization mod for Minecraft which improves frame rates and reduces lag spikes.",
+  "name": "Pojavium",
+  "description": "Patched version of sodium for running on holy gl4es",
   "authors": [
-    "JellySquid"
+    "JellySquid",
+    "ZenXArch"
   ],
   "contact": {
     "homepage": "https://github.com/CaffeineMC/sodium-fabric",
@@ -24,7 +25,7 @@
     ]
   },
   "custom": {
-    "fabric-renderer-api-v1:contains_renderer": true
+    "fabric-renderer-api-v1:contains_renderer": false
   },
   "accessWidener": "sodium.accesswidener",
   "mixins": [
@@ -38,6 +39,7 @@
   "breaks": {
     "optifabric": "*",
     "canvas": "*",
-    "notenoughcrashes": "*"
+    "notenoughcrashes": "*",
+    "sodium" : "*"
   }
 }

@@ -25,14 +25,14 @@ public class SodiumClientMod implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         ModContainer mod = FabricLoader.getInstance()
-                .getModContainer("sodium")
+                .getModContainer("pojavium")
                 .orElseThrow(NullPointerException::new);
 
         MOD_VERSION = mod.getMetadata()
                 .getVersion()
                 .getFriendlyString();
 
-        LOGGER = LoggerFactory.getLogger("Sodium");
+        LOGGER = LoggerFactory.getLogger("Pojavium");
         CONFIG = loadConfig();
 
         logStartupMessages();
@@ -91,7 +91,7 @@ public class SodiumClientMod implements ClientModInitializer {
     }
 
     private static void logStartupMessages() {
-        var name = Text.literal("Sodium Renderer")
+        var name = Text.literal("Sodium Renderer (Nope)")
                 .setStyle(Style.EMPTY.withFormatting(Formatting.GREEN));
 
         var version = Text.literal(" (version %s) loaded...".formatted(SodiumClientMod.getVersion()))
@@ -102,11 +102,11 @@ public class SodiumClientMod implements ClientModInitializer {
 
         {
             Console.instance()
-                    .logMessage(MessageLevel.INFO, Text.literal("* Official website: ").append(Text.literal("https://caffeinemc.net")
+                    .logMessage(MessageLevel.INFO, Text.literal("* Official website: ").append(Text.literal("Does not exist")
                             .setStyle(Style.EMPTY.withFormatting(Formatting.AQUA))), 9.0);
 
             Console.instance()
-                    .logMessage(MessageLevel.INFO, Text.literal("* Help support development: ").append(Text.literal("https://caffeinemc.net/donate")
+                    .logMessage(MessageLevel.INFO, Text.literal("* Help support development: ").append(Text.literal("Contribute code")
                             .setStyle(Style.EMPTY.withFormatting(Formatting.AQUA))), 9.0);
         }
     }
